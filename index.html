@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *,*::after,*::before{
+        padding:0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background-color: rgb(23, 23, 134);
+    }
+
+    .wrapper{
+        width: 450px;
+        background: #ffffff;
+        padding: 70px 40px;
+        position: absolute;
+        transform:translate(-50%,-50%);
+        left: 50%;
+        top: 50%;
+        box-shadow: 0 20px 25px rgba(0,0,0,0.25);
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+
+
+    }
+    .container{
+        width: 45%;
+    }
+
+    input{
+        width: 100%;
+        height: 50px;
+        border-radius: 5px;
+        border: 2px solid #d2d2d2;
+        outline: none;
+        margin-top: 8px;
+        padding: 0 10px; 
+    }
+    input:focus{
+        border-color: blue;
+    }
+</style>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <label for="celsius">Celsius</label>
+            <input type="number" id="celsius" oninput="celToFar()">
+        </div>
+        <div class="container">
+            <label for="fahrenheit">fahrenheit</label>
+            <input type="number" id="fahrenheit" oninput="farToCel()">
+        </div>
+    </div>
+
+<script src="app.js"></script>
+</body>
+</html>
